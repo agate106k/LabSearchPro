@@ -10,7 +10,7 @@
 
 ## Application
 ### Overview
-<img src="architecture.png" alt="architecture" width="400"/>
+<img src="architecture.png" alt="architecture" width="600"/>
 
 ### Schema
 
