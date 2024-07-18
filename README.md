@@ -10,8 +10,8 @@
 
 ## Application
 ### Overview
+<img src="architecture.png" alt="architecture" width="400"/>
 
-![architecture](architecture.png)
 ### Schema
 
 ## Configuration
