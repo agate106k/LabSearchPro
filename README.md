@@ -11,6 +11,7 @@
 ## Application
 ### Overview
 
+![architecture](architecture.png)
 ### Schema
 
 ## Configuration
