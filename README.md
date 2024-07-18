@@ -8,12 +8,12 @@
 - Thymeleaf
 
 ## Setup
-Just by running the code beneath GUI would be ready.
+1. Just by running the command bellow, your GUI would be ready.
 ```bash
   docker compose up --build
 ```
 
-Once the log beneath is shown, access to [http://localhost:8090/api/](http://localhost:8090/api/)
+2. Once the log beneath is shown, access to [http://localhost:8090/api/](http://localhost:8090/api/)
 ```bash
 java  | 2023-07-19T16:51:56.304Z  INFO 285 --- [main] com.todo Todo : Started Todo in ~
 ```
