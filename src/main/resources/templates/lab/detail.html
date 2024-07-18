@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Paper Detail</title>
+</head>
+<body>
+    <h1 th:text="${paper.title}">Paper Title</h1>
+    <p th:text="'Publication Date: ' + ${paper.publicationDate}">Publication Date</p>
+    <p th:text="'Cited Number: ' + ${paper.citedNum}">Cited Number</p>
+    <p th:text="'Project Link: ' + ${paper.projectLink}">Project Link</p>
+    <p th:text="'Related Fields: ' + ${paper.relatedFields}">Related Fields</p>
+    <a href="/paper">Back to List</a>
+</body>
+</html>

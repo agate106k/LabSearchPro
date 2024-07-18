@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Paper List</title>
+</head>
+<body>
+    <h1>Paper List</h1>
+    <ul>
+        <li th:each="paper : ${papers}">
+            <a th:href="@{/paper/{id}(id=${paper.doi})}" th:text="${paper.title}">Paper Title</a>
+        </li>
+    </ul>
+    <a href="/paper/new">Create New Paper</a>
+</body>
+</html>
