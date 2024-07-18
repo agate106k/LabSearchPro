@@ -1,3 +1,4 @@
+# Lab Search Pro
 ## Prerequisites
 - JAVA
 - Gradle
