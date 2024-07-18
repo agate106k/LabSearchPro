@@ -10,9 +10,11 @@
 
 ## Application
 ### Overview
+
 <img src="architecture.png" alt="architecture" width="600"/>
 
 ### Schema
+All the tables belong to either 'public' or 'resources' namespaces
 
 ## Configuration
 Configurations for Lab Search Por are as follows:
