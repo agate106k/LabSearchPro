@@ -8,7 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.todo.entity.DoneTask;
-import com.todo.repository.DoneTaskRepository;
+import com.todo.repository.jpa.DoneTaskRepository;
 
 @Service
 public class DoneTaskService {

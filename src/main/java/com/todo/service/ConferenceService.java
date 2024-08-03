@@ -1,7 +1,7 @@
 package com.todo.service;
 
 import com.todo.entity.Conference;
-import com.todo.repository.ConferenceRepository;
+import com.todo.repository.jpa.ConferenceRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

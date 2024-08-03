@@ -8,7 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.todo.entity.Task;
-import com.todo.repository.TaskRepository;
+import com.todo.repository.jpa.TaskRepository;
 
 import java.util.Optional;
 

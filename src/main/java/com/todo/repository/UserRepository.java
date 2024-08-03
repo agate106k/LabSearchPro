@@ -1,4 +1,4 @@
-package com.todo.repository;
+package com.todo.repository.jpa;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
@@ -8,6 +8,5 @@ import com.todo.entity.MUser;
 
 @Repository
 public interface UserRepository extends JpaRepository<MUser, Long> {
-
-    public Optional<MUser> findByEmail(String email);
+    Optional<MUser> findByEmail(String email);
 }

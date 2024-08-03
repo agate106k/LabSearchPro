@@ -25,7 +25,7 @@ public class PaperController {
   }
 
   @GetMapping("/{id}")
-  public String getPaper(@PathVariable Long id, Model model) {
+  public String getPaper(@PathVariable int id, Model model) {
     Paper paper = paperService.findById(id).orElseThrow(() -> new NoSuchElementException("No paper found with id: " + id));
     model.addAttribute("paper", paper);
     return "paper/detail";

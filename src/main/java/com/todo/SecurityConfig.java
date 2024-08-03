@@ -1,4 +1,3 @@
-
 package com.todo;
 
 import org.springframework.context.annotation.Bean;
@@ -91,7 +90,6 @@ public class SecurityConfig {
         .build();
     return new InMemoryUserDetailsManager(user);
   }
-
 
   @Configuration
   public class WebConfig<HttpPutFormContentFilter> {

@@ -1,4 +1,3 @@
-
 package com.todo.auth;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,7 +8,7 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
-import com.todo.repository.UserRepository;
+import com.todo.repository.jpa.UserRepository; // 修正
 
 import jakarta.transaction.Transactional;
 import lombok.extern.slf4j.Slf4j;

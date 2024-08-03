@@ -1,4 +1,4 @@
-package com.todo.repository;
+package com.todo.repository.jpa;
 
 import java.util.List;
 

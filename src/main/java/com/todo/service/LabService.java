@@ -1,7 +1,7 @@
 package com.todo.service;
 
 import com.todo.entity.Lab;
-import com.todo.repository.LabRepository;
+import com.todo.repository.jpa.LabRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

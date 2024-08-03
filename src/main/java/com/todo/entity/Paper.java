@@ -1,45 +1,39 @@
 package com.todo.entity;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
-import jakarta.persistence.Table;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.cassandra.core.mapping.Column;
+import org.springframework.data.cassandra.core.mapping.PrimaryKey;
+import org.springframework.data.cassandra.core.mapping.Table;
 import lombok.Data;
+import java.time.LocalDate;
+import java.util.List;
 
-@Entity
 @Data
-@Table(name = "Paper")
+@Table("papers")
 public class Paper {
 
-  @Id
-  @Column(name = "doi")
-  @GeneratedValue(strategy = GenerationType.AUTO)
-  private Long doi;
+  @PrimaryKey
+  @Column("paper_id")
+  private int paperId;
 
-  @ManyToOne
-  @JoinColumn(name = "member_id")
-  private Members member;
+  @Column("member_ids")
+  private List<Integer> memberIds;
 
-  @ManyToOne
-  @JoinColumn(name = "conference_id")
-  private Conference conference;
+  @Column("conference_id")
+  private int conferenceId;
 
-  @Column(name = "title")
+  @Column("title")
   private String title;
 
-  @Column(name = "publication_date")
-  private String publicationDate;
+  @Column("publication_date")
+  private LocalDate publicationDate;
 
-  @Column(name = "cited_num")
-  private int citedNum;
+  @Column("cited_number")
+  private int citedNumber;
 
-  @Column(name = "project_link")
+  @Column("project_link")
   private String projectLink;
 
-  @Column(name = "related_fields")
+  @Column("related_fields")
   private String relatedFields;
 }

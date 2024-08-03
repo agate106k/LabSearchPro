@@ -1,7 +1,7 @@
 package com.todo.service;
 
 import com.todo.entity.Paper;
-import com.todo.repository.PaperRepository;
+import com.todo.repository.cassandra.PaperRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -18,7 +18,7 @@ public class PaperService {
     return paperRepository.findAll();
   }
 
-  public Optional<Paper> findById(Long id) {
+  public Optional<Paper> findById(int id) {
     return paperRepository.findById(id);
   }
 

@@ -26,6 +26,9 @@ repositories {
     maven {
         url = uri("https://repository.jboss.org/maven2")
     }
+    maven {
+        url = uri("https://maven.scalar-labs.com/repository/maven-public/")
+    }
 }
 
 dependencies {
@@ -44,6 +47,10 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-security'
     testImplementation 'org.springframework.security:spring-security-test'
     implementation 'org.thymeleaf.extras:thymeleaf-extras-springsecurity6:3.1.1.RELEASE'
+    implementation 'com.scalar-labs:scalardb:3.3.0'
+    
+    // Spring Data Cassandraの依存関係を追加
+    implementation 'org.springframework.boot:spring-boot-starter-data-cassandra'
 }
 
 tasks.named('test') {

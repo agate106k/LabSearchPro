@@ -1,4 +1,4 @@
-package com.todo.repository;
+package com.todo.repository.jpa;
 
 import com.todo.entity.Lab;
 import org.springframework.data.jpa.repository.JpaRepository;

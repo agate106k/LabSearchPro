@@ -60,4 +60,5 @@ volumes:
   backend-dynamodb-data: {}
 
 networks:
-  java-intro-network: {}
+  java-intro-network:
+    driver: bridge
