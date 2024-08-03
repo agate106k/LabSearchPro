@@ -10,7 +10,8 @@
 
 ## Application
 ### Overview
-Lab Search Pro manages transactions between Cassandra (NoSQL) and MySQL (SQL) using Scalar DB. The GUI is managed with Spring Boot and Thymeleaf. Additionally, these packages are integrally managed using Gradle and Docker.
+Lab Search Pro manages transactions between Cassandra (NoSQL) and RDBMS (SQL) using Scalar DB. The GUI is managed with Spring Boot and Thymeleaf. Additionally, these packages are integrally managed using Gradle and Docker.
+For RDBMS, we utilized SQlite.
 
 <img src="architecture.png" alt="architecture" width="600"/>
 
