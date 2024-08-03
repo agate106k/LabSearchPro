@@ -20,6 +20,7 @@ All the tables belong to either 'public' or 'resources' namespaces
 
 ## Configuration
 Configurations for Lab Search Por are as follows:
+src/main/resources/application.properties
 ```bash
 scalar.db.storage=multi-storage
 scalar.db.multi_storage.storages=sqlite,cassandra
