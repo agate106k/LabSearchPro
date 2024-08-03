@@ -10,6 +10,15 @@ services:
       - "127.0.0.1:8090:8090"
     networks:
       - java-intro-network
+    depends_on:
+      backend-cassandra:
+        condition: service_healthy
+    environment:
+      - SPRING_DATA_CASSANDRA_CONTACT-POINTS=backend-cassandra
+      - SPRING_DATA_CASSANDRA_PORT=9042
+      - SPRING_DATA_CASSANDRA_KEYSPACE-NAME=research
+      - SPRING_DATA_CASSANDRA_USERNAME=cassandra
+      - SPRING_DATA_CASSANDRA_PASSWORD=cassandra
 
   backend-postgres:
     image: postgres:15.1
@@ -30,11 +39,17 @@ services:
       - "9042:9042"
     volumes:
       - backend-cassandra-data:/var/lib/cassandra
+      - ./cassandra-init.cql:/docker-entrypoint-initdb.d/cassandra-init.cql
     environment:
       - CASSANDRA_DC=datacenter1
       - CASSANDRA_ENDPOINT_SNITCH=GossipingPropertyFileSnitch
     networks:
       - java-intro-network
+    healthcheck:
+      test: ["CMD-SHELL", "[ $$(nodetool status | grep UN) ]"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
 
   backend-dynamodb:
     image: amazon/dynamodb-local:1.21.0

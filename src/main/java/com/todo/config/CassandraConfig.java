@@ -16,7 +16,7 @@ public class CassandraConfig extends AbstractCassandraConfiguration {
 
   @Override
   protected String getContactPoints() {
-    return "127.0.0.1";
+    return "backend-cassandra";
   }
 
   @Override
@@ -35,7 +35,8 @@ public class CassandraConfig extends AbstractCassandraConfiguration {
       session.setContactPoints(getContactPoints());
       session.setPort(getPort());
       session.setKeyspaceName(getKeyspaceName());
-      session.setLocalDatacenter(getLocalDataCenter()); // ここを確認
+      session.setLocalDatacenter(getLocalDataCenter());
+      
       return session;
   }
 }
