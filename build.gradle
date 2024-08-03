@@ -51,6 +51,7 @@ dependencies {
     
     // Spring Data Cassandraの依存関係を追加
     implementation 'org.springframework.boot:spring-boot-starter-data-cassandra'
+    
 }
 
 tasks.named('test') {

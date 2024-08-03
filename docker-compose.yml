@@ -31,7 +31,7 @@ services:
     volumes:
       - backend-cassandra-data:/var/lib/cassandra
     environment:
-      - CASSANDRA_DC=dc1
+      - CASSANDRA_DC=datacenter1
       - CASSANDRA_ENDPOINT_SNITCH=GossipingPropertyFileSnitch
     networks:
       - java-intro-network
